@@ -1,0 +1,63 @@
+:root {
+  --wkit-accent-hs: 210, 100%;
+  --wkit-on-accent-rgb: 255, 255, 255;
+  --wkit-bg-rgb: 255, 255, 255;
+  --wkit-on-bg-rgb: 10, 14, 34;
+
+  --wkit-border-radius: 16px;
+
+  --wkit-font-family: 'Inter', sans-serif;
+  --wkit-font-family-mono: 'IBM Plex Mono', monospace;
+
+  --wkit-font-size-large: 18px;
+  --wkit-font-size-medium: 16px;
+  --wkit-font-size-small: 14px;
+
+  --wkit-line-height-large: 22px;
+  --wkit-line-height-medium: 20px;
+  --wkit-line-height-small: 17px;
+
+  --wkit-button-width: 284px;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --wkit-accent-hs: 166, 91%;
+//     --wkit-on-accent-rgb: 255, 255, 255;
+//     --wkit-bg-rgb: 40, 40, 40;
+//     --wkit-on-bg-rgb: 241, 241, 241;
+//   }
+// }
+
+// [data-theme='dark']:root {
+//   --wkit-accent-hs: 166, 91%;
+//   --wkit-on-accent-rgb: 255, 255, 255;
+//   --wkit-bg-rgb: 40, 40, 40;
+//   --wkit-on-bg-rgb: 241, 241, 241;
+// }
+
+.wkit-button {
+  border-radius: var(--wkit-border-radius);
+  width: var(--wkit-button-width);
+  padding: 14px 16px;
+  color: rgba(var(--wkit-on-accent-rgb), 1);
+  font-weight: 600;
+  font-size: var(--wkit-font-size-medium);
+  font-family: var(--wkit-font-family);
+  // line-height: 22px;
+  line-height: var(--wkit-line-height-medium);
+  cursor: pointer;
+  border: 0;
+
+  & {
+    background-color: hsl(var(--wkit-accent-hs), 50%);
+  }
+
+  &:hover {
+    background-color: hsl(var(--wkit-accent-hs), 45%);
+  }
+
+  &:active {
+    background-color: hsl(var(--wkit-accent-hs), 37%);
+  }
+}
